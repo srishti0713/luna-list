@@ -21,7 +21,7 @@ function AddToDo() {
 				className="flex justify-between w-[75%]  m-auto bg-white dark:bg-gray-800 rounded-xl border border-gray-300 shadow-sm dark:border-gray-700 py-2 px-2 "
 				initial={{ opacity: 0, y: -5 }}
 				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.8, delay:0.2 }}
+				transition={{ duration: 0.8, delay: 0.2 }}
 			>
 				<input
 					type="text"

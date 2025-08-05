@@ -2,10 +2,7 @@ import React from "react";
 
 function Card({ number, desc, icon }) {
 	return (
-		<div
-			
-			className="flex flex-col w-[25%] px-4 py-2 items-center gap-2 bg-slate-50 border border-gray-200 rounded-xl shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-900 dark:hover:bg-gray-800"
-		>
+		<div className="flex flex-col w-[25%] px-4 py-2 items-center gap-2 bg-slate-50 border border-gray-200 rounded-xl shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-900 dark:hover:bg-gray-800">
 			{icon && (
 				<div className=" flex m-1 items-center justify-center">
 					{icon}

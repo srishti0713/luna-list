@@ -18,9 +18,9 @@ export default function ThemeChange() {
 
 	return (
 		<motion.button
-			initial={{opacity:0 }}
-      animate={{opacity:1}}
-      transition={{duration:1}}
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 1 }}
 			onClick={() => setDarkMode(!darkMode)}
 			className=" fixed top-4 left-4 px-4 py-2 rounded-full cursor-pointer bg-white outline-1 outline-gray-200 dark:outline-none dark:bg-gray-800 hover:scale-105 transition w-14 h-12"
 		>

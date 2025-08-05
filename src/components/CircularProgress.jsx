@@ -10,7 +10,6 @@ const CircularProgress = ({ progress = 0, size = 35, strokeWidth = 8 }) => {
 	return (
 		<div className="relative w-15 h-15 py-3 px-3 bg-fuchsia-100 dark:bg-pink-800 rounded-2xl flex items-center justify-center">
 			<svg width={size} height={size} className="transform -rotate-90">
-				{/* Background circle */}
 				<circle
 					cx={size / 2}
 					cy={size / 2}
@@ -20,7 +19,6 @@ const CircularProgress = ({ progress = 0, size = 35, strokeWidth = 8 }) => {
 					fill="transparent"
 				/>
 
-				{/* Progress circle */}
 				<motion.circle
 					cx={size / 2}
 					cy={size / 2}
@@ -39,7 +37,6 @@ const CircularProgress = ({ progress = 0, size = 35, strokeWidth = 8 }) => {
 				/>
 			</svg>
 
-			{/* Percentage text */}
 			<div className="absolute inset-0 flex items-center justify-center">
 				<motion.span
 					className="text-sm font-semibold text-gray-700"

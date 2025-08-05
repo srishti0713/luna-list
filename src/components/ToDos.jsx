@@ -21,18 +21,19 @@ function ToDos() {
 		const [hour, minute] = time.split(":");
 		let h = parseInt(hour, 10);
 		const ampm = h >= 12 ? "PM" : "AM";
-		h = h % 12 || 12; // Convert 0 -> 12
+		h = h % 12 || 12;
 		return `${h}:${minute} ${ampm}`;
 	}
 
 	return (
 		<>
 			{todos.length === 0 ? (
-				<motion.div className="m-20 h-15  py-4 flex flex-col justify-center"
-                initial={{opacity:0, y:10}}
-      animate={{opacity:1, y:0}}
-      transition={{duration:0.3, delay:0.2}}
-                >
+				<motion.div
+					className="m-20 h-15  py-4 flex flex-col justify-center"
+					initial={{ opacity: 0, y: 10 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.3, delay: 0.2 }}
+				>
 					<p className="text-gray-900 dark:text-gray-100 text-lg font-bold">
 						No tasks yet
 					</p>
@@ -76,11 +77,11 @@ function ToDos() {
 									transition={{
 										duration: 0.2,
 										ease: [0.25, 0.46, 0.45, 0.94],
-                                        dalay: index * 0.1,
+										// delay: index * 0.1,
 									}}
 									layout
 								>
-									<div className="flex peer  gap-2 flex-1">
+									<div className="flex peer gap-2 flex-1">
 										<input
 											type="checkbox"
 											checked={todo.completed}
@@ -94,31 +95,35 @@ function ToDos() {
 												todo.completed
 													? "line-through text-gray-500 dark:text-gray-400"
 													: ""
-											}`}
+											} ${!todo.time ? "pb-5" : ""}`}
 										>
 											<div className="">{todo.text}</div>
-											<div className="flex mt-1 gap-1 flex-1 text-sm text-cyan-600 dark:text-sky-100">
-												<div className=" text-cyan-600 dark:text-sky-200 pointer-events-none py-1">
-													<svg
-														xmlns="http://www.w3.org/2000/svg"
-														fill="none"
-														viewBox="0 0 24 24"
-														strokeWidth={2}
-														stroke="currentColor"
-														className="w-4 h-4"
-													>
-														<path
-															strokeLinecap="round"
-															strokeLinejoin="round"
-															d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z"
-														/>
-													</svg>
+											{todo.time && (
+												<div className="flex mt-1 gap-1 flex-1 text-sm text-cyan-600 dark:text-sky-100">
+													<div className=" text-cyan-600 dark:text-sky-200 pointer-events-none py-1">
+														<svg
+															xmlns="http://www.w3.org/2000/svg"
+															fill="none"
+															viewBox="0 0 24 24"
+															strokeWidth={2}
+															stroke="currentColor"
+															className="w-4 h-4"
+														>
+															<path
+																strokeLinecap="round"
+																strokeLinejoin="round"
+																d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z"
+															/>
+														</svg>
+													</div>
+													<div className="text-cyan-700 dark:text-sky-200 text-md py-0.5">
+														{" "}
+														{formatTo12Hour(
+															todo.time
+														)}
+													</div>
 												</div>
-												<div className="text-cyan-700 dark:text-sky-200 text-md py-0.5">
-													{" "}
-													{formatTo12Hour(todo.time)}
-												</div>
-											</div>
+											)}
 										</div>
 									</div>
 									<div className="m-2 opacity-0 peer-hover:opacity-100 hover:opacity-100">

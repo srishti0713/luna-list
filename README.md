@@ -1,12 +1,60 @@
-# React + Vite
+#  Luna List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Luna List is a minimal and functional to-do list web app built with **React**. Schedule tasks with a specific time, edit them anytime, and check them off when you're done — now with **dark mode** support!
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Add tasks with a scheduled time  
+- Mark tasks as complete/incomplete  
+- Edit existing tasks  
+- Delete tasks  
+- Dark mode toggle  
+- Automatically saves tasks to local storage  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Preview
+
+Here’s a preview of the app:
+
+![App Screenshot](src/assets/preview.png)  
+
+---
+
+## Getting Started
+
+Follow these steps to run the project locally:
+
+1. **Clone the repo**  
+   ```bash
+   git clone https://github.com/yourusername/react-todo-app.git
+   cd react-todo-app
+
+2. **Install dependencies**
+   ```bash
+   npm install
+
+3. **Start the app**
+   ```bash
+   npm run dev
+
+4. **Open your browser at:**
+   
+   http://localhost:3000 
+
+---
+
+## Built With
+
+- React
+- JavaScript
+- HTML & CSS  
+
+---
+
+## Requirements
+
+- Node.js(v14 or higher recommended)
+
