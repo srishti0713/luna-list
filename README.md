@@ -29,8 +29,8 @@ Follow these steps to run the project locally:
 
 1. **Clone the repo**  
    ```bash
-   git clone https://github.com/yourusername/react-todo-app.git
-   cd react-todo-app
+   git clone https://github.com/srishti0713/luna-list.git
+   cd luna-list
 
 2. **Install dependencies**
    ```bash
@@ -42,19 +42,19 @@ Follow these steps to run the project locally:
 
 4. **Open your browser at:**
    
-   http://localhost:3000 
+   http://localhost:5173  
 
 ---
 
-## Built With
+## Notes
 
-- React
-- JavaScript
-- HTML & CSS  
+- Currently does not support responsive design
+- For best experience, use it on desktop or larger screens
 
 ---
 
-## Requirements
+## View Live
 
-- Node.js(v14 or higher recommended)
+https://lunalist.netlify.app/
+
 

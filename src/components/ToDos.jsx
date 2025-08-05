@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSelector, useDispatch } from "react-redux";
 import { removeTodo, updateTodo, checkTodo } from "../features/todoSlice";
@@ -53,7 +53,7 @@ function ToDos() {
 					</motion.div>
 					<ul className="list-none relative">
 						<AnimatePresence>
-							{todos.map((todo, index) => (
+							{todos.map((todo) => (
 								<motion.li
 									className={` mt-4 flex w-[75%] m-auto justify-between items-center bg-white dark:bg-zinc-800 px-5 py-2 shadow   dark:shadow:2xl rounded  ${
 										editTodoId
